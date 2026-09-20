@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Made by Petabyte! — Petabyte404</title>
-<link rel="icon" type="image/svg+xml" href="pinguin.svg" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<title>Wartungsarbeiten — ByteSoft</title>
+<link rel="icon" type="image/png" href="ByteSoft_B.png" />
+<link rel="apple-touch-icon" href="ByteSoft_B.png" />
 <style>
   :root {
-    --primary: #3b82f6;
-    --primary-dark: #2563eb;
-    --primary-light: #60a5fa;
     --bg: #0f1117;
     --surface: #171922;
-    --surface-2: #1c1f2b;
     --border: #252837;
     --text: #e5e7eb;
     --muted: #9ca3af;
@@ -29,8 +25,6 @@
     user-drag: none;
     pointer-events: none;
   }
-  a, button { pointer-events: auto; }
-  a *, button * { pointer-events: none; }
   body {
     font-family: Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
     background: var(--bg);
@@ -48,7 +42,7 @@
     position: fixed; inset: 0; z-index: 0; pointer-events: none;
     background-image: radial-gradient(circle, rgba(59,130,246,.12) 1px, transparent 1px);
     background-size: 28px 28px;
-    animation: gridPan 22s linear infinite;
+    animation: gridPan 15s linear infinite;
     mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
   }
   @keyframes gridPan {
@@ -56,10 +50,10 @@
     to { background-position: 56px 84px; }
   }
   .blob { position: fixed; border-radius: 50%; filter: blur(110px); pointer-events: none; z-index: 0; }
-  .blob-1 { width: 460px; height: 460px; background: #2563eb; opacity: .24; top: -140px; left: -140px; animation: drift1 14s var(--ease) infinite alternate; }
-  .blob-2 { width: 400px; height: 400px; background: #3b82f6; opacity: .15; bottom: -160px; right: -120px; animation: drift2 18s var(--ease) infinite alternate; }
-  .blob-3 { width: 320px; height: 320px; background: #1e40af; opacity: .2; top: 35%; left: 55%; animation: drift1 20s var(--ease) infinite alternate-reverse; }
-  .blob-4 { width: 260px; height: 260px; background: #60a5fa; opacity: .1; top: 60%; left: 10%; animation: drift2 16s var(--ease) infinite alternate-reverse; }
+  .blob-1 { width: 460px; height: 460px; background: #2563eb; opacity: .24; top: -140px; left: -140px; animation: drift1 5s var(--ease) infinite alternate; }
+  .blob-2 { width: 400px; height: 400px; background: #3b82f6; opacity: .15; bottom: -160px; right: -120px; animation: drift2 6s var(--ease) infinite alternate; }
+  .blob-3 { width: 320px; height: 320px; background: #1e40af; opacity: .2; top: 35%; left: 55%; animation: drift1 7s var(--ease) infinite alternate-reverse; }
+  .blob-4 { width: 260px; height: 260px; background: #60a5fa; opacity: .1; top: 60%; left: 10%; animation: drift2 5.5s var(--ease) infinite alternate-reverse; }
   @keyframes drift1 {
     0% { transform: translate(0,0) scale(1); }
     50% { transform: translate(60px,40px) scale(1.1); }
@@ -86,83 +80,20 @@
     to { opacity: 1; transform: translateY(0) scale(1); }
   }
   .row-anim { animation: entry .6s var(--ease) both; }
-  .d1 { animation-delay: .08s; } .d2 { animation-delay: .16s; } .d3 { animation-delay: .24s; } .d4 { animation-delay: .32s; }
+  .d1 { animation-delay: .08s; }
 
-  .profile { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 22px; }
-  .avatar {
-    width: 88px; height: 88px; border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--border);
-    outline: 2px solid rgba(59,130,246,.4);
-    outline-offset: 3px;
-    margin-bottom: 14px;
-    background: var(--surface-2);
+  .profile { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 6px; }
+  .main-logo {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
     display: block;
+    filter: drop-shadow(0 4px 16px rgba(0,0,0,.4));
   }
 
   h1 { font-size: 24px; font-weight: 650; letter-spacing: -.02em; margin-bottom: 6px; text-align: center; }
-  p.sub { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 22px; text-align: center; }
-
-  .label { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-  .label.mt { margin-top: 18px; }
-
-  .discord-btn {
-    width: 100%;
-    display: flex; align-items: center; gap: 12px;
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 12px 14px;
-    color: var(--text);
-    font-family: inherit;
-    font-size: 14px;
-    cursor: pointer;
-    transition: transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
-  }
-  .discord-btn:hover { transform: translateY(-2px); border-color: rgba(59,130,246,.55); background: #202334; }
-  .discord-btn:active { transform: scale(.99); }
-  .discord-btn .meta { flex: 1; }
-  .copy-pill {
-    font-size: 12px; font-weight: 600;
-    color: var(--primary-light);
-    background: rgba(59,130,246,.12);
-    border: 1px solid rgba(59,130,246,.3);
-    padding: 5px 10px; border-radius: 999px;
-    transition: background .25s var(--ease), color .25s var(--ease);
-    white-space: nowrap;
-  }
-  .discord-btn.copied .copy-pill { color: #4ade80; background: rgba(34,197,94,.12); border-color: rgba(34,197,94,.35); }
-
-  .socials { display: grid; gap: 10px; }
-  a.social {
-    display: flex; align-items: center; gap: 12px;
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 12px 14px;
-    text-decoration: none; color: var(--text);
-    transition: transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
-  }
-  a.social:hover {
-    transform: translateY(-2px);
-    border-color: rgba(59,130,246,.55);
-    background: #202334;
-  }
-  a.social:active { transform: scale(.99); }
-  .icon {
-    width: 36px; height: 36px; border-radius: 10px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .icon svg { width: 18px; height: 18px; fill: var(--muted); transition: fill .25s var(--ease); }
-  a.social:hover .icon svg { fill: var(--text); }
-  .meta { display: flex; flex-direction: column; text-align: left; }
-  .meta strong { font-size: 14px; font-weight: 600; }
-  .meta span { font-size: 12px; color: var(--muted); }
-  .arrow { margin-left: auto; color: var(--muted); font-size: 16px; transition: transform .25s var(--ease), color .25s var(--ease); }
-  a.social:hover .arrow { transform: translateX(2px); color: var(--primary-light); }
 
   .footer {
     margin-top: 20px; padding-top: 16px;
@@ -203,56 +134,11 @@
   <main class="wrap">
     <div class="card">
       <div class="profile row-anim">
-        <img class="avatar" src="pb.gif" alt="Petabyte404 Profilbild" draggable="false" ondragstart="return false" />
-        <h1>Made by Petabyte404</h1>
-        <p class="sub">Thank You!</p>
+        <img class="main-logo" src="ByteSoft.png" alt="ByteSoft Logo" draggable="false" ondragstart="return false" />
+        <h1>Wir befinden uns momentan in Wartungsarbeiten!</h1>
       </div>
 
-      <div class="label row-anim d1">My Discord</div>
-      <button class="discord-btn row-anim d1" id="discordBtn" type="button" onclick="copyDiscord()">
-        <span class="icon">
-          <svg viewBox="0 0 24 24"><path d="M20.32 4.37a19.8 19.8 0 0 0-4.93-1.51 13.78 13.78 0 0 0-.64 1.28 18.27 18.27 0 0 0-5.5 0 13.78 13.78 0 0 0-.64-1.28c-1.71.29-3.37.8-4.93 1.51A20.3 20.3 0 0 0 .1 18.06a19.9 19.9 0 0 0 6.07 3.03c.49-.66.93-1.37 1.3-2.1a12.9 12.9 0 0 1-2.05-.98c.17-.12.34-.25.5-.38a14.2 14.2 0 0 0 12.16 0c.16.13.33.26.5.38-.65.38-1.34.72-2.05.98.37.73.81 1.44 1.3 2.1a19.84 19.84 0 0 0 6.07-3.03 20.26 20.26 0 0 0-3.58-13.69zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42 2.18 1.09 2.16 2.42c0 1.34-.95 2.42-2.16 2.42zm7.96 0c-1.18 0-2.16-1.08-2.16-2.42s.95-2.42 2.16-2.42 2.18 1.09 2.16 2.42c0 1.34-.95 2.42-2.16 2.42z"/></svg>
-        </span>
-        <span class="meta"><strong>Discord</strong><span id="discordName">Petabyte404</span></span>
-        <span class="copy-pill" id="copyPill">Copy</span>
-      </button>
-
-      <div class="label mt row-anim d2">Social Media</div>
-      <div class="socials">
-        <a class="social row-anim d2" href="https://www.tiktok.com/@Petabyte404" target="_blank" rel="noopener">
-          <span class="icon">
-            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
-          </span>
-          <span class="meta"><strong>TikTok</strong><span>@Petabyte404</span></span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="social row-anim d3" href="https://www.youtube.com/@Petabyte-404" target="_blank" rel="noopener">
-          <span class="icon">
-            <svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-          </span>
-          <span class="meta"><strong>YouTube</strong><span>@Petabyte-404</span></span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="social row-anim d3" href="https://www.instagram.com/petabyte_404" target="_blank" rel="noopener">
-          <span class="icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.15A4 4 0 1 1 16 12a4 4 0 0 1-4 3.99zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
-          </span>
-          <span class="meta"><strong>Instagram</strong><span>petabyte_404</span></span>
-          <span class="arrow">→</span>
-        </a>
-
-        <a class="social row-anim d3" href="https://www.twitch.tv/petabyte404" target="_blank" rel="noopener">
-          <span class="icon">
-            <svg viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57V4.714zm4.715 0H18v5.143h-1.714V4.714zM6 0 1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0H6zm14.571 11.143-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714v9.429z"/></svg>
-          </span>
-          <span class="meta"><strong>Twitch</strong><span>petabyte404</span></span>
-          <span class="arrow">→</span>
-        </a>
-      </div>
-
-      <div class="footer row-anim d4">
+      <div class="footer row-anim d1">
         Made with Love
         <svg class="heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
       </div>
@@ -269,32 +155,6 @@
       e.preventDefault();
     }
   });
-
-  function copyDiscord() {
-    var name = "Petabyte404";
-    var btn = document.getElementById("discordBtn");
-    var pill = document.getElementById("copyPill");
-    function done() {
-      btn.classList.add("copied");
-      pill.textContent = "Kopiert!";
-      setTimeout(function () {
-        btn.classList.remove("copied");
-        pill.textContent = "Copy";
-      }, 1600);
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(name).then(done).catch(function () { fallback(); });
-    } else { fallback(); }
-    function fallback() {
-      var ta = document.createElement("textarea");
-      ta.value = name;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy"); } catch (e) {}
-      document.body.removeChild(ta);
-      done();
-    }
-  }
 </script>
 </body>
 </html>
